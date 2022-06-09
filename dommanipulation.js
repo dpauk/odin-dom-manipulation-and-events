@@ -25,3 +25,21 @@ meToo.textContent = "ME TOO!"
 newDiv.appendChild(meToo);
 
 container.appendChild(newDiv);
+
+// Events
+
+const btn = document.querySelector("#btn");
+btn.addEventListener('click', function(e) {
+    console.log(e);
+    console.log(e.target);
+    e.target.style.background = 'blue';
+});
+
+// Add listener to multiple buttons
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
